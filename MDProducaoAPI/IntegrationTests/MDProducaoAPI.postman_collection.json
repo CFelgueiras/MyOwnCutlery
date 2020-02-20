@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "af6087c0-1cdf-4871-b2d4-70d82a284a02",
+		"name": "MDProducaoAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST - createProduct",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Name\":\"colher12\",\n\t\"ManPlanId\": 1\n\t\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Product",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Product"
+					]
+				},
+				"description": "POST new Product"
+			},
+			"response": []
+		},
+		{
+			"name": "POST - createManufacturingPlan",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Name\":\"PPteste1\",\n\t\"Operations\":[\n\t\t\t\t{\"OperationId\": 1},\n\t\t\t\t{\"OperationId\": 2}\n\t\t\t\t]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/ManufacturingPlan",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"ManufacturingPlan"
+					]
+				},
+				"description": "POST new Product"
+			},
+			"response": []
+		},
+		{
+			"name": "GET - productByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5002/api/product/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"api",
+						"product",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - manufacturingPlanByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://mdp3nbgrp5.azurewebsites.net/api/ManufacturingPlan/",
+					"protocol": "https",
+					"host": [
+						"mdp3nbgrp5",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"ManufacturingPlan",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - ALL Operations",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2b80e8a2-b2f2-44ad-b17e-955ab50cd004",
+						"exec": [
+							"pm.test(\"Confirmação de objecto inserido com sucesso\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://mdp3nbgrp5.azurewebsites.net/api/operation",
+					"protocol": "https",
+					"host": [
+						"mdp3nbgrp5",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"operation"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

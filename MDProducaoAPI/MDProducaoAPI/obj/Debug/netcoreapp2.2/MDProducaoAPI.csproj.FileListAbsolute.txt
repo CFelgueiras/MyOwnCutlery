@@ -1,0 +1,14 @@
+C:\Users\claud\Desktop\BackEnd\MDProducaoAPI\MDProducaoAPI\bin\Debug\netcoreapp2.2\MDProducaoAPI.deps.json
+C:\Users\claud\Desktop\BackEnd\MDProducaoAPI\MDProducaoAPI\bin\Debug\netcoreapp2.2\MDProducaoAPI.runtimeconfig.json
+C:\Users\claud\Desktop\BackEnd\MDProducaoAPI\MDProducaoAPI\bin\Debug\netcoreapp2.2\MDProducaoAPI.runtimeconfig.dev.json
+C:\Users\claud\Desktop\BackEnd\MDProducaoAPI\MDProducaoAPI\bin\Debug\netcoreapp2.2\MDProducaoAPI.dll
+C:\Users\claud\Desktop\BackEnd\MDProducaoAPI\MDProducaoAPI\bin\Debug\netcoreapp2.2\MDProducaoAPI.pdb
+C:\Users\claud\Desktop\BackEnd\MDProducaoAPI\MDProducaoAPI\obj\Debug\netcoreapp2.2\MDProducaoAPI.csprojAssemblyReference.cache
+C:\Users\claud\Desktop\BackEnd\MDProducaoAPI\MDProducaoAPI\obj\Debug\netcoreapp2.2\MDProducaoAPI.csproj.CoreCompileInputs.cache
+C:\Users\claud\Desktop\BackEnd\MDProducaoAPI\MDProducaoAPI\obj\Debug\netcoreapp2.2\MDProducaoAPI.RazorAssemblyInfo.cache
+C:\Users\claud\Desktop\BackEnd\MDProducaoAPI\MDProducaoAPI\obj\Debug\netcoreapp2.2\MDProducaoAPI.RazorAssemblyInfo.cs
+C:\Users\claud\Desktop\BackEnd\MDProducaoAPI\MDProducaoAPI\obj\Debug\netcoreapp2.2\MDProducaoAPI.AssemblyInfoInputs.cache
+C:\Users\claud\Desktop\BackEnd\MDProducaoAPI\MDProducaoAPI\obj\Debug\netcoreapp2.2\MDProducaoAPI.AssemblyInfo.cs
+C:\Users\claud\Desktop\BackEnd\MDProducaoAPI\MDProducaoAPI\obj\Debug\netcoreapp2.2\MDProducaoAPI.RazorTargetAssemblyInfo.cache
+C:\Users\claud\Desktop\BackEnd\MDProducaoAPI\MDProducaoAPI\obj\Debug\netcoreapp2.2\MDProducaoAPI.dll
+C:\Users\claud\Desktop\BackEnd\MDProducaoAPI\MDProducaoAPI\obj\Debug\netcoreapp2.2\MDProducaoAPI.pdb

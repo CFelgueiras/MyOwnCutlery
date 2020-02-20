@@ -1,0 +1,755 @@
+{
+	"info": {
+		"_postman_id": "ecc9e1af-e439-4762-9c6c-d365153895ed",
+		"name": "MDFabricaAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST - create Operation",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "46454e85-9246-43be-a9fc-bf6e4c651428",
+						"exec": [
+							"pm.test(\"Successful POST request Operation\",function(){",
+							"    pm.expect(pm.response.code).to.be.oneOf([200,201]);",
+							"});",
+							"",
+							"pm.test(\"Content-Type is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"pm.globals.set(\"operationId\", jsonData.operationId);",
+							"pm.globals.set(\"name\", jsonData.name);",
+							"pm.globals.set(\"toolName\", jsonData.toolName);",
+							"pm.globals.set(\"operationName\", jsonData.operationName);",
+							"pm.globals.set(\"operationTime\", jsonData.operationTime);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Name\": \"groselhas\",\n\t\"ToolName\": \"12cm\",\n\t\"OperationTime\":15\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "mdf3nbgrp5.azurewebsites.net/api/operation",
+					"host": [
+						"mdf3nbgrp5",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"operation"
+					]
+				},
+				"description": "POST new Product"
+			},
+			"response": []
+		},
+		{
+			"name": "POST - create Operation to fail",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4a34fad3-a4f2-4dd5-8288-10cc3757bf90",
+						"exec": [
+							"pm.test(\"Impossivel efectuar POST para uma operação já existente\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Name\": \"pali456766\",\n\t\"ToolName\": \"5cm\",\n\t\"OperationTime\":7\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mdf3nbgrp5.azurewebsites.net/api/operation",
+					"protocol": "https",
+					"host": [
+						"mdf3nbgrp5",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"operation"
+					]
+				},
+				"description": "POST new Product"
+			},
+			"response": []
+		},
+		{
+			"name": "POST - create Machine",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "82a8e982-0f37-4825-8a21-02b0daa86201",
+						"exec": [
+							"pm.test(\"Successful POST request Machine\",function(){",
+							"    pm.expect(pm.response.code).to.be.oneOf([200,201]);",
+							"});",
+							"",
+							"pm.test(\"Content-Type is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"pm.globals.set(\"machineId\", jsonData.machineId);",
+							"pm.globals.set(\"Identification\", jsonData.Identification);",
+							"pm.globals.set(\"machineTypeName\", jsonData.machineTypeName);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Identification\": \"m10dh344467\",\n\t\"Brand\": \"BMW\",\n\t\"Model\": \"MT01521\",\n\t\"Localization\": \"PL1\",\n\t\"Capacity\": 30.5,\n\t\"MachineTypeId\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mdf3nbgrp5.azurewebsites.net/api/machine",
+					"protocol": "https",
+					"host": [
+						"mdf3nbgrp5",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"machine"
+					]
+				},
+				"description": "POST new Product"
+			},
+			"response": []
+		},
+		{
+			"name": "POST - create MachineFromSGRAI",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "82a8e982-0f37-4825-8a21-02b0daa86201",
+						"exec": [
+							"pm.test(\"Successful POST request Machine\",function(){",
+							"    pm.expect(pm.response.code).to.be.oneOf([200,201]);",
+							"});",
+							"",
+							"pm.test(\"Content-Type is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"pm.globals.set(\"machineId\", jsonData.machineId);",
+							"pm.globals.set(\"Identification\", jsonData.Identification);",
+							"pm.globals.set(\"machineTypeName\", jsonData.machineTypeName);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Identification\": \"sgrai99\",\n\t\"Brand\": \"BMW\",\n\t\"Model\": \"MT01521\",\n\t\"Localization\": \"PL1\",\n\t\"Capacity\": 30.5,\n\t\"MachineTypeId\": 1,\n\t\"state\": true,\n\t\"ProductionLineId\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mdf3nbgrp5.azurewebsites.net/api/machine/MachineFromSgrai",
+					"protocol": "https",
+					"host": [
+						"mdf3nbgrp5",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"machine",
+						"MachineFromSgrai"
+					]
+				},
+				"description": "POST new Product"
+			},
+			"response": []
+		},
+		{
+			"name": "POST - create Machine to fail",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0e637c80-0783-46ed-bb27-93b18658a0f1",
+						"exec": [
+							"pm.test(\"Impossivel efectuar POST para uma máquina já existente\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Name\": \"m10dh34446\",\n\t\"MachineTypeId\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mdf3nbgrp5.azurewebsites.net/api/machine",
+					"protocol": "https",
+					"host": [
+						"mdf3nbgrp5",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"machine"
+					]
+				},
+				"description": "POST new Product"
+			},
+			"response": []
+		},
+		{
+			"name": "POST - create MachineType",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "78355c69-8c57-4555-811c-749d9d02f630",
+						"exec": [
+							"pm.test(\"Successful POST request Machine Type\",function(){",
+							"    pm.expect(pm.response.code).to.be.oneOf([200,201]);",
+							"});",
+							"",
+							"pm.test(\"Content-Type is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"pm.globals.set(\"machineId\", jsonData.machineId);",
+							"pm.globals.set(\"name\", jsonData.name);",
+							"pm.globals.set(\"machineTypeName\", jsonData.machineTypeName);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Name\":\"Mt2019\",\n\t\"Operations\":[\n\t\t\t\t\t{\"OperationId\": 6},\n\t\t\t\t\t{\"OperationId\": 7}\n\t\t\t\t]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mdf3nbgrp5.azurewebsites.net/api/machinetype",
+					"protocol": "https",
+					"host": [
+						"mdf3nbgrp5",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"machinetype"
+					]
+				},
+				"description": "POST new Product"
+			},
+			"response": []
+		},
+		{
+			"name": "POST - create MachineType to fail",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0a7e1e20-fb5e-45af-b5b2-da7d10d4ce88",
+						"exec": [
+							"pm.test(\"Impossivel efectuar POST para um tipo de máquina já existente\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Name\":\"Mtipo1126\",\n\t\"Operations\":[\n\t\t\t\t\t{\"OperationId\": 1},\n\t\t\t\t\t{\"OperationId\": 2}\n\t\t\t\t]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mdf3nbgrp5.azurewebsites.net/api/machinetype",
+					"protocol": "https",
+					"host": [
+						"mdf3nbgrp5",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"machinetype"
+					]
+				},
+				"description": "POST new Product"
+			},
+			"response": []
+		},
+		{
+			"name": "POST - create ProductionLine",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "697690bd-2304-4bc0-9020-ae7eb7ec3e52",
+						"exec": [
+							"pm.test(\"Successful POST request ProductionLine \",function(){",
+							"    pm.expect(pm.response.code).to.be.oneOf([200,201]);",
+							"});",
+							"",
+							"pm.test(\"Content-Type is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"pm.globals.set(\"productionLineId\", jsonData.productionLineId);",
+							"pm.globals.set(\"name\", jsonData.name);",
+							"pm.globals.set(\"machineList\", jsonData.machineList);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Name\": \"prodline66\",\n\t\"MachineIds\":[\n\t\t\t\t\t1,2\n\t\t\t\t]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mdf3nbgrp5.azurewebsites.net/api/productionline",
+					"protocol": "https",
+					"host": [
+						"mdf3nbgrp5",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"productionline"
+					]
+				},
+				"description": "POST new Product"
+			},
+			"response": []
+		},
+		{
+			"name": "POST - create ProductionLine to Fail",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9c9f4a0e-4626-4e8e-8805-eb4b07bf5d9e",
+						"exec": [
+							"pm.test(\"Impossivel efectuar POST para um tipo de máquina já existente\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Name\": \"prodline66\",\n\t\"MachineIds\":[\n\t\t\t\t\t1,2\n\t\t\t\t]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mdf3nbgrp5.azurewebsites.net/api/productionline",
+					"protocol": "https",
+					"host": [
+						"mdf3nbgrp5",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"productionline"
+					]
+				},
+				"description": "POST new Product"
+			},
+			"response": []
+		},
+		{
+			"name": "GET - machineByID - 10",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4f05b0d9-bdc8-497d-a461-84206b96f581",
+						"exec": [
+							"pm.test(\"Confirmação de objecto inserido com sucesso\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://mdf3nbgrp5.azurewebsites.net/api/machine/2",
+					"protocol": "https",
+					"host": [
+						"mdf3nbgrp5",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"machine",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - OperationsByMachineTypeId - 9",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2b80e8a2-b2f2-44ad-b17e-955ab50cd004",
+						"exec": [
+							"pm.test(\"Confirmação de objecto inserido com sucesso\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://mdf3nbgrp5.azurewebsites.net/api/machinetype/machinetypeid/7",
+					"protocol": "https",
+					"host": [
+						"mdf3nbgrp5",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"machinetype",
+						"machinetypeid",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - MachinesTypeByMachineId - 8",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cf6dcd34-663f-4797-91cd-d55058eabff0",
+						"exec": [
+							"pm.test(\"Confirmação de objecto inserido com sucesso\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://mdf3nbgrp5.azurewebsites.net/api/machinetype/3",
+					"protocol": "https",
+					"host": [
+						"mdf3nbgrp5",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"machinetype",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT - update operations of MachineType - 6",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e90dabf4-2058-43ca-9dac-68d66a57fd64",
+						"exec": [
+							"pm.test(\"Status code is 200, confirma update\", function () {",
+							"    pm.response.to.have.status(500);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Name\" :\"Mtipo2\",\n\t\"Operations\":[\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\"OperationId\": 1,\n\t\t\t\t\t\t\"Name\": \"op1\", \n\t\t\t\t\t\t\"ToolName\": \"tool1\"\n\t\t\t\t\t}\n\t\t\t\t]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mdf3nbgrp5.azurewebsites.net/api/machinetype",
+					"protocol": "https",
+					"host": [
+						"mdf3nbgrp5",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"machinetype"
+					]
+				},
+				"description": "POST new Product"
+			},
+			"response": []
+		},
+		{
+			"name": "GET - All machines",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4f05b0d9-bdc8-497d-a461-84206b96f581",
+						"exec": [
+							"pm.test(\"Confirmação de objecto inserido com sucesso\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://mdf3nbgrp5.azurewebsites.net/api/machine/MachinesByProductionLine/",
+					"protocol": "https",
+					"host": [
+						"mdf3nbgrp5",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"machine",
+						"MachinesByProductionLine",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

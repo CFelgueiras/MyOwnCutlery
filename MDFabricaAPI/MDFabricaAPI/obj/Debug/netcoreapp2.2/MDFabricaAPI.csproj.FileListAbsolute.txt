@@ -1,0 +1,14 @@
+C:\Users\claud\Desktop\BackEnd\MDFabricaAPI\MDFabricaAPI\bin\Debug\netcoreapp2.2\MDFabricaAPI.deps.json
+C:\Users\claud\Desktop\BackEnd\MDFabricaAPI\MDFabricaAPI\bin\Debug\netcoreapp2.2\MDFabricaAPI.runtimeconfig.json
+C:\Users\claud\Desktop\BackEnd\MDFabricaAPI\MDFabricaAPI\bin\Debug\netcoreapp2.2\MDFabricaAPI.runtimeconfig.dev.json
+C:\Users\claud\Desktop\BackEnd\MDFabricaAPI\MDFabricaAPI\bin\Debug\netcoreapp2.2\MDFabricaAPI.dll
+C:\Users\claud\Desktop\BackEnd\MDFabricaAPI\MDFabricaAPI\bin\Debug\netcoreapp2.2\MDFabricaAPI.pdb
+C:\Users\claud\Desktop\BackEnd\MDFabricaAPI\MDFabricaAPI\obj\Debug\netcoreapp2.2\MDFabricaAPI.csprojAssemblyReference.cache
+C:\Users\claud\Desktop\BackEnd\MDFabricaAPI\MDFabricaAPI\obj\Debug\netcoreapp2.2\MDFabricaAPI.csproj.CoreCompileInputs.cache
+C:\Users\claud\Desktop\BackEnd\MDFabricaAPI\MDFabricaAPI\obj\Debug\netcoreapp2.2\MDFabricaAPI.RazorAssemblyInfo.cache
+C:\Users\claud\Desktop\BackEnd\MDFabricaAPI\MDFabricaAPI\obj\Debug\netcoreapp2.2\MDFabricaAPI.RazorAssemblyInfo.cs
+C:\Users\claud\Desktop\BackEnd\MDFabricaAPI\MDFabricaAPI\obj\Debug\netcoreapp2.2\MDFabricaAPI.AssemblyInfoInputs.cache
+C:\Users\claud\Desktop\BackEnd\MDFabricaAPI\MDFabricaAPI\obj\Debug\netcoreapp2.2\MDFabricaAPI.AssemblyInfo.cs
+C:\Users\claud\Desktop\BackEnd\MDFabricaAPI\MDFabricaAPI\obj\Debug\netcoreapp2.2\MDFabricaAPI.RazorTargetAssemblyInfo.cache
+C:\Users\claud\Desktop\BackEnd\MDFabricaAPI\MDFabricaAPI\obj\Debug\netcoreapp2.2\MDFabricaAPI.dll
+C:\Users\claud\Desktop\BackEnd\MDFabricaAPI\MDFabricaAPI\obj\Debug\netcoreapp2.2\MDFabricaAPI.pdb

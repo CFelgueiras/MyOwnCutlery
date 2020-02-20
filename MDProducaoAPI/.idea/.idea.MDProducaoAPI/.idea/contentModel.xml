@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/.nuget/packages/microsoft.net.test.sdk/16.0.1/build/netcoreapp1.0" t="Include">
+      <e p="Microsoft.NET.Test.Sdk.Program.cs" t="Include" />
+    </e>
+    <e p="$USER_HOME$/.nuget/packages/xunit.runner.visualstudio/2.4.0/build/netcoreapp1.0/xunit.runner.reporters.netcoreapp10.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/xunit.runner.visualstudio/2.4.0/build/netcoreapp1.0/xunit.runner.utility.netcoreapp10.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/xunit.runner.visualstudio/2.4.0/build/netcoreapp1.0/xunit.runner.visualstudio.dotnetcore.testadapter.dll" t="Include" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="MDProducaoAPI" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="ManufacturingPlanController.cs" t="Include" />
+          <e p="ProductController.cs" t="Include" />
+        </e>
+        <e p="MDProducaoAPI.csproj" t="IncludeRecursive" />
+        <e p="Migrations" t="Include">
+          <e p="20191102162938_021120191626.cs" t="Include" />
+          <e p="20191102162938_021120191626.Designer.cs" t="Include" />
+          <e p="ContextModelSnapshot.cs" t="Include" />
+        </e>
+        <e p="Models" t="Include">
+          <e p="DTO" t="Include">
+            <e p="ManufacturingPlanDTO.cs" t="Include" />
+            <e p="OperationDTO.cs" t="Include" />
+            <e p="ProductDto.cs" t="Include" />
+            <e p="ProductDtoF.cs" t="Include" />
+          </e>
+          <e p="Entity.cs" t="Include" />
+          <e p="ManufacturingPlan.cs" t="Include" />
+          <e p="MVDto" t="Include">
+            <e p="MVManufacturingPlan.cs" t="Include" />
+            <e p="MVOperation.cs" t="Include" />
+            <e p="MVProduct.cs" t="Include" />
+          </e>
+          <e p="Operation.cs" t="Include" />
+          <e p="Product.cs" t="Include" />
+          <e p="ValueObects" t="Include">
+            <e p="ManufacturingPlanId.cs" t="Include" />
+            <e p="Name.cs" t="Include" />
+            <e p="OperationId.cs" t="Include" />
+            <e p="OperationTool.cs" t="Include" />
+            <e p="ProductId.cs" t="Include" />
+            <e p="ProductType.cs" t="Include" />
+            <e p="ToolName.cs" t="Include" />
+            <e p="ValueObject.cs" t="Include" />
+          </e>
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="MDProducaoAPI.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Repository" t="Include">
+          <e p="Configurations" t="Include">
+            <e p="EntityConfiguration.cs" t="Include" />
+            <e p="ManufacturingPlanConfiguration.cs" t="Include" />
+            <e p="OperationConfiguration.cs" t="Include" />
+            <e p="ProductConfiguration.cs" t="Include" />
+          </e>
+          <e p="Context.cs" t="Include" />
+          <e p="Interfaces" t="Include">
+            <e p="IManufacturingPlanRepository.cs" t="Include" />
+            <e p="IOperationRepository.cs" t="Include" />
+            <e p="IProductRepository.cs" t="Include" />
+            <e p="IRepository.cs" t="Include" />
+          </e>
+          <e p="ManufacturingPlanRepository.cs" t="Include" />
+          <e p="OperationRepository.cs" t="Include" />
+          <e p="ProductRepository.cs" t="Include" />
+          <e p="Repository.cs" t="Include" />
+          <e p="Transformers" t="Include">
+            <e p="ManufacturingPlanIdParameterTransformer.cs" t="Include" />
+            <e p="OperationIdParameterTransformer.cs" t="Include" />
+            <e p="ProductIdParameterTransformer.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Service" t="Include">
+          <e p="Interfaces" t="Include">
+            <e p="IManufacturingPlanService.cs" t="Include" />
+            <e p="IOperationService.cs" t="Include" />
+            <e p="IProductService.cs" t="Include" />
+          </e>
+          <e p="ManufacturingPlanService.cs" t="Include" />
+          <e p="OperationService.cs" t="Include" />
+          <e p="ProductService.cs" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+      </e>
+      <e p="MDProducaoAPI.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="testMDProducaoAPI" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="ManufacturingPlanServiceTest.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="testMDProducaoAPI.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="ProductServiceTest.cs" t="Include" />
+        <e p="testMDProducaoAPI.csproj" t="IncludeRecursive" />
+        <e p="UnitTest1.cs" t="Include" />
+      </e>
+    </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2019.2/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.2/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_MDProducaoAPI.2130386165.00" t="ExcludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/consoles/db" t="IncludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />
+  </component>
+</project>

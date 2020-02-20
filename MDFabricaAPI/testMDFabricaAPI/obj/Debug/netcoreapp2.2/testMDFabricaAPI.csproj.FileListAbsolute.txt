@@ -1,0 +1,4 @@
+C:\Users\claud\Desktop\BackEnd\MDFabricaAPI\testMDFabricaAPI\obj\Debug\netcoreapp2.2\testMDFabricaAPI.csprojAssemblyReference.cache
+C:\Users\claud\Desktop\BackEnd\MDFabricaAPI\testMDFabricaAPI\obj\Debug\netcoreapp2.2\testMDFabricaAPI.csproj.CoreCompileInputs.cache
+C:\Users\claud\Desktop\BackEnd\MDFabricaAPI\testMDFabricaAPI\obj\Debug\netcoreapp2.2\testMDFabricaAPI.AssemblyInfoInputs.cache
+C:\Users\claud\Desktop\BackEnd\MDFabricaAPI\testMDFabricaAPI\obj\Debug\netcoreapp2.2\testMDFabricaAPI.AssemblyInfo.cs
