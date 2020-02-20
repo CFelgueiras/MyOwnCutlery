@@ -42,7 +42,7 @@ namespace MDProducaoAPI.Repository
         public MVOperationTool GetOperationsFromMDFByOperationTool(string opTool)
         {
             HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("https://mdf3nbgrp5.azurewebsites.net");
+            client.BaseAddress = new Uri("https://xptoxpto.azurewebsites.net");
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
 
